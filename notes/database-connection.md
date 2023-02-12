@@ -17,4 +17,20 @@ Frontend -> Backend -> Database
 * **SQL** Server
 * Azure **SQL**
 
-In the case of the first two, they are drivers and through a string we make the connection.
+In the case of the first two, they are drivers and through a string we make the connection. Within .NET there is a component that allows us to make all the database connections and it is known as ADO.NET
+
+### ADO.NET
+
+Set of libraries for accesing data and data services.
+
+```
+       .NET Application
+
+DataSets, LINQ to SQL, Entity Framework
+   |            |             |
+             ADO.NET
+SQL Server, ODBC, OLE DB, Custom Providers O...N
+                |
+              https://
+SQL, NoSQL, XML, REST, SharePoint, Excel ...
+```
