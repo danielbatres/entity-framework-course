@@ -24,7 +24,7 @@ In the case of the first two, they are drivers and through a string we make the 
 Set of libraries for accesing data and data services.
 
 ```
-       .NET Application
+        .NET Application
 
 DataSets, LINQ to SQL, Entity Framework
    |            |             |
