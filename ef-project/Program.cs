@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<TasksContext>(otp => otp.UseInMemoryDatabase("TasksDB"));
+builder.Services.AddSqlServer<TasksContext>("Data Source=DESKTOP-NMVIEF5\\SQLEXPRESS;Initial Catalog=TasksDB;user id=DanielBatres;password=0123456789");
 
 var app = builder.Build();
 
