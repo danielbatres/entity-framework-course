@@ -1,5 +1,6 @@
 using ef_project.Models;
 using Microsoft.EntityFrameworkCore;
+using Task = ef_project.Models.Task;
 
 namespace ef_project;
 

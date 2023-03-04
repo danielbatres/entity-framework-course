@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ef_project.Models;
 
-public class Tasks {
+public class Task {
   [Key]
   public Guid TaskId { get; set; }
   [ForeignKey("CategoryId")]
