@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSqlServer<TasksContext>("Data Source=DESKTOP-NMVIEF5\\SQLEXPRESS;Initial Catalog=TasksDB;user id=DanielBatres;password=0123456789");
+builder.Services.AddSqlServer<TasksContext>(builder.Configuration.GetConnectionString("cnTasks"));
 
 var app = builder.Build();
 
