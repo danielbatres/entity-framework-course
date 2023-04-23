@@ -4,18 +4,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ef_project.Models;
 
 public class Task {
-  [Key]
+  //[Key]
   public Guid TaskId { get; set; }
-  [ForeignKey("CategoryId")]
+  //[ForeignKey("CategoryId")]
   public Guid CategoryId { get; set; }
-  [Required]
-  [MaxLength(200)]
+  //[Required]
+  //[MaxLength(200)]
   public string Title { get; set; }
   public string Description { get; set; }
   public Priority TaskPriority { get; set; }
   public DateTime CreationDateTime { get; set; }
   public virtual Category Category { get; set; }
-  [NotMapped]
+  //[NotMapped]
   public string Summary { get; set; }
 }
 
