@@ -10,5 +10,6 @@ public class Category {
   public string Name { get; set; }
   public string Description { get; set; }
   public int Weight { get; set; }
+  [System.Text.Json.Serialization.JsonIgnore]
   public virtual ICollection<Task> Tasks { get; set; }
 }
