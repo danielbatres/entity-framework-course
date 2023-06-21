@@ -16,7 +16,19 @@ app.MapGet("/dbconnection", async ([FromServices] TasksContext dbContext) => {
 });
 
 app.MapGet("/api/tasks", async ([FromServices] TasksContext dbContext) => {
-  return Results.Ok(dbContext.Tasks.Include(t => t.Category).Where(t => t.TaskPriority == ef_project.Models.Priority.Low));
+  return Results.Ok(dbContext.Tasks.Include(t => t.Category));
+});
+
+app.MapPost("/api/tasks", async ([FromServices] TasksContext dbContext, [FromBody] ef_project.Models.Task task) =>
+{
+  task.TaskId = Guid.NewGuid();
+  task.CreationDateTime = DateTime.Now;
+  await dbContext.AddAsync(task);
+  // await dbContext.Tasks.AddAsync(task);
+
+  await dbContext.SaveChangesAsync();
+
+  return Results.Ok();
 });
 
 app.Run();
